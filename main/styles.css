@@ -998,6 +998,11 @@ h3 {
 #slide-7 .rain-evidence { grid-template-columns: minmax(0, 1.55fr) minmax(0, 0.45fr); gap: 24px; margin: 0 0 16px; }
 #slide-7 .rain-figure { grid-template-columns: minmax(0, 1fr); gap: 5px; }
 #slide-7 .rain-figure img { width: 100%; height: clamp(185px, 24vh, 225px); }
+#slide-7 .rain-figure img {
+  object-fit: contain;
+  object-position: center;
+  background: #000;
+}
 #slide-7 .rain-pipeline { grid-template-columns: 1fr 28px 1fr 28px 1fr 28px 1.06fr; }
 #slide-7 .pipeline-node { min-height: 142px; padding: 14px 16px; }
 #slide-7 .pipeline-node small { margin-bottom: 9px; }
