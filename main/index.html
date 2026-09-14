@@ -1369,10 +1369,6 @@
         }
       }
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <nav class="nav" aria-label="Slides">
@@ -1423,35 +1419,36 @@
         <span class="slide-number">03</span>
         <div class="frame comparison-frame">
           <h2 class="comparison-title" id="comparison-title">What changes with Asterisk Peru?</h2>
-          <div class="comparison-visual" aria-label="Today compared with Asterisk Peru">
-            <div class="comparison-head today-head">Today</div>
-            <div class="comparison-head asterisk-head">With Asterisk Peru</div>
-            <div class="comparison-pair">
-              <div class="comparison-problem"><span>01</span><strong>Short service contracts</strong></div>
-              <span class="comparison-arrow" aria-hidden="true">→</span>
-              <div class="comparison-solution"><strong>A permanent core team</strong></div>
-            </div>
-            <div class="comparison-pair">
-              <div class="comparison-problem"><span>02</span><strong>Teams dissolve after each project</strong></div>
-              <span class="comparison-arrow" aria-hidden="true">→</span>
-              <div class="comparison-solution"><strong>Knowledge stays inside the lab</strong></div>
-            </div>
-            <div class="comparison-pair">
-              <div class="comparison-problem"><span>03</span><strong>Software and datasets lose maintenance</strong></div>
-              <span class="comparison-arrow" aria-hidden="true">→</span>
-              <div class="comparison-solution"><strong>Shared infrastructure improves over time</strong></div>
-            </div>
-            <div class="comparison-pair">
-              <div class="comparison-problem"><span>04</span><strong>Researchers work individually</strong></div>
-              <span class="comparison-arrow" aria-hidden="true">→</span>
-              <div class="comparison-solution"><strong>Scientists build ambitious work together</strong></div>
-            </div>
-            <div class="comparison-pair">
-              <div class="comparison-problem"><span>05</span><strong>Institutional dependence</strong></div>
-              <span class="comparison-arrow" aria-hidden="true">→</span>
-              <div class="comparison-solution"><strong>Governance and decisions remain in Peru</strong></div>
-            </div>
-          </div>
+          <table class="comparison">
+            <thead>
+              <tr>
+                <th scope="col">Today</th>
+                <th scope="col">With Asterisk Peru</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Short service contracts</td>
+                <td>A permanent core team</td>
+              </tr>
+              <tr>
+                <td>Teams dissolve after each project</td>
+                <td>Knowledge stays inside the lab</td>
+              </tr>
+              <tr>
+                <td>Software and datasets lose maintenance</td>
+                <td>Shared infrastructure improves over time</td>
+              </tr>
+              <tr>
+                <td>Researchers work individually</td>
+                <td>Scientists build ambitious work together</td>
+              </tr>
+              <tr>
+                <td>Institutional dependence</td>
+                <td>Governance and decisions remain in Peru</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
@@ -1462,9 +1459,9 @@
           <h2 class="team-title" id="team-title">Initial team</h2>
           <div class="team-grid">
             <article class="person">
-              <img class="portrait" src="assets/sammy-carlos.jpeg" alt="Sammy Carlos" />
+              <img class="portrait" src="assets/sammy-carlos.jpeg" alt="Sammy Carlos Romualdo" />
               <div>
-                <h3>Sammy Carlos</h3>
+                <h3>Sammy Carlos Romualdo</h3>
                 <p class="person-role">Environmental engineering</p>
                 <p class="person-bio">Environmental engineer with eight years’ experience managing environmental projects and impact assessment in Peru.</p>
               </div>
@@ -1523,8 +1520,8 @@
                 <p class="olla-kicker">The present reality</p>
                 <p class="olla-intro">Peru’s <i>comedores populares</i> are <strong>formed, organized and run mainly by women.</strong></p>
                 <div class="olla-stats" aria-label="Infrastructure gaps in Peru's community kitchens">
-                  <div class="olla-stat"><strong>70.6%</strong><span>received no municipal equipment improvements</span></div>
-                  <div class="olla-stat"><strong>94.4%</strong><span>received no municipal infrastructure improvements</span></div>
+                  <div class="olla-stat"><strong>70.6%</strong><span>received no municipal equipment improvements</span><small>1,784 of 2,527 supervised kitchens</small></div>
+                  <div class="olla-stat"><strong>94.4%</strong><span>received no municipal infrastructure improvements</span><small>2,385 of 2,527 supervised kitchens</small></div>
                 </div>
                 <p class="olla-proposition"><strong>Olla Abierta funds equipment—not food.</strong></p>
                 <p class="olla-open">Open crowdfunding turns verified needs into durable assets, with every sol, quote, decision, invoice and delivery public.</p>
@@ -1563,30 +1560,18 @@
         <div class="frame rain-frame">
           <h2 class="rain-title" id="rain-title">Rain4PE v2</h2>
           <p class="rain-subtitle">Deep Learning for Near-Real-Time Rainfall Mapping over Peru</p>
-          <div class="rain-evidence">
+          <div class="rain-visual">
             <figure class="rain-figure">
               <img src="assets/rain4pe-figure11.jpg" alt="Geostationary imagery reconstructed as a vertical radar-reflectivity slice and maximum-column reflectivity" />
-              <figcaption>Prior work: geostationary imagery reconstructed as 3D radar reflectivity.</figcaption>
+              <figcaption>Prior work by Cesar Aybar and collaborators: geostationary imagery reconstructed as three-dimensional radar reflectivity.</figcaption>
             </figure>
-            <p class="rain-close"><span>Scientific outcome</span><strong>A virtual precipitation radar for Peru,</strong> updated whenever new GOES observations arrive.</p>
+            <div class="rain-steps">
+              <div class="rain-step"><strong>GOES input</strong><span>Two consecutive ABI observations capture cloud structure and short-term evolution.</span></div>
+              <div class="rain-step"><strong>GPM-DPR supervision</strong><span>Spaceborne radar profiles teach the model three-dimensional reflectivity. GPM is used during training.</span></div>
+              <div class="rain-step"><strong>SENAMHI calibration</strong><span>Ground stations convert the lowest valid reflectivity layer into rainfall fields over Peru.</span></div>
+            </div>
           </div>
-          <div class="rain-pipeline" aria-label="Rain4PE scientific workflow">
-            <article class="pipeline-node">
-              <small>01 · Observe</small><strong>GOES</strong><p>Two ABI observations capture cloud structure and short-term evolution.</p>
-            </article>
-            <span class="pipeline-arrow" aria-hidden="true">→</span>
-            <article class="pipeline-node">
-              <small>02 · Train</small><strong>GPM-DPR</strong><p>Spaceborne radar profiles teach 3D reflectivity during training.</p>
-            </article>
-            <span class="pipeline-arrow" aria-hidden="true">→</span>
-            <article class="pipeline-node">
-              <small>03 · Calibrate</small><strong>SENAMHI</strong><p>Ground stations convert reflectivity into rainfall fields over Peru.</p>
-            </article>
-            <span class="pipeline-arrow" aria-hidden="true">→</span>
-            <article class="pipeline-node pipeline-result">
-              <small>04 · Result</small><strong>Virtual radar</strong><p>Near-real-time precipitation mapping for Peru.</p>
-            </article>
-          </div>
+          <p class="rain-close"><strong>A virtual precipitation radar for Peru,</strong> updated whenever new GOES observations arrive.</p>
         </div>
       </section>
 
@@ -1594,25 +1579,25 @@
         <img class="brand" src="assets/logo-horizontal-color.png" alt="Asterisk Labs" />
         <span class="slide-number">08</span>
         <div class="frame leonardo-frame">
-          <h2 class="leonardo-title grant-title" id="leonardo-title">Becas Leonardo <span>· Fundación BBVA</span></h2>
-          <p class="leonardo-kicker grant-kicker">First Latin American call · Peru</p>
-          <p class="leonardo-lead grant-lead">Funding for individual researchers and creators to develop original projects with direct social, scientific or cultural value.</p>
-          <div class="leonardo-hero-metrics" aria-label="Key facts about the call">
-            <div><strong>US$50k</strong><span>maximum award</span></div>
-            <div><strong>12–18</strong><span>months per project</span></div>
-            <div><strong>5</strong><span>awards in Peru</span></div>
-            <div class="metric-deadline"><strong>21 Sep 2026</strong><span>deadline · 14:00 Peru</span></div>
-          </div>
+          <h2 class="leonardo-title" id="leonardo-title">Becas Leonardo · Fundación BBVA</h2>
           <div class="leonardo-layout">
             <div>
-              <p class="leonardo-fit grant-fit"><strong>Rain4PE v2</strong> fits the AI and data science area, with a direct climate application for Peru.</p>
+              <p class="leonardo-kicker">First Latin American call · Peru</p>
+              <p class="leonardo-lead">Funding for individual researchers and creators to develop original projects with direct social, scientific or cultural value.</p>
+              <div class="leonardo-numbers">
+                <div class="leonardo-number"><strong>5</strong><span>awards in Peru</span></div>
+                <div class="leonardo-number"><strong>US$50k</strong><span>maximum per award</span></div>
+                <div class="leonardo-number"><strong>12–18</strong><span>months per project</span></div>
+              </div>
               <p class="leonardo-detail"><strong>Who can apply:</strong> researchers and creators aged 30–45 who reside in Peru.</p>
+              <p class="leonardo-fit">Rain4PE v2 fits the AI and data science area, with a direct climate application for Peru.</p>
             </div>
             <div>
               <a class="leonardo-visual" href="https://fundacionbbva.pe/educacion/becas-leonardo/" target="_blank" rel="noreferrer" aria-label="Official Becas Leonardo call in Peru">
                 <img src="assets/becas-leonardo-peru.jpg" alt="Becas Leonardo Fundación BBVA official campaign image" />
               </a>
               <p class="leonardo-areas"><strong>Eligible areas:</strong> Computer Science, Data Science and Artificial Intelligence; Cleantech and Biodiversity.</p>
+              <p class="leonardo-deadline">Deadline: 21 September 2026 · 14:00 Peru time</p>
               <p class="leonardo-links"><a href="https://fundacionbbva.pe/educacion/becas-leonardo/" target="_blank" rel="noreferrer">Official call</a> · <a href="https://www.programaleonardo.com/" target="_blank" rel="noreferrer">Application portal</a></p>
             </div>
           </div>
@@ -1654,7 +1639,7 @@
         <img class="brand" src="assets/logo-horizontal-color.png" alt="Asterisk Labs" />
         <span class="slide-number">10</span>
         <div class="frame strategy-frame">
-          <h2 class="strategy-title" id="path-title">From grant to lasting impact</h2>
+          <h2 class="strategy-title" id="path-title">From grant to a larger programme</h2>
           <div class="funding-path" aria-label="Prototype and future funding pathway">
             <article class="path-step">
               <span class="path-index">01</span>
@@ -1677,7 +1662,7 @@
               <p>Use demonstrated feasibility to pursue a more ambitious operational research programme.</p>
             </article>
           </div>
-          <p class="strategy-close timeline-close"><strong>The first grant reduces the scientific risk.</strong> The prototype becomes evidence for a larger investment in Rain4PE and Asterisk Peru.</p>
+          <p class="strategy-close"><strong>The first grant reduces the scientific risk.</strong> The prototype becomes evidence for a larger investment in Rain4PE and Asterisk Peru.</p>
         </div>
       </section>
 
@@ -1702,25 +1687,8 @@
 
     <script>
       const slides = [...document.querySelectorAll(".slide")];
-      const navLinks = [...document.querySelectorAll(".nav a")];
       const ollaStory = document.querySelector(".olla-story");
       const ollaImageSets = [...document.querySelectorAll(".olla-image-set")];
-
-      const activeSlideObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            navLinks.forEach((link) => {
-              const isCurrent = link.getAttribute("href") === `#${entry.target.id}`;
-              if (isCurrent) link.setAttribute("aria-current", "true");
-              else link.removeAttribute("aria-current");
-            });
-          });
-        },
-        { threshold: 0.55 },
-      );
-
-      slides.forEach((slide) => activeSlideObserver.observe(slide));
 
       const updateOllaImages = () => {
         if (!ollaStory || !ollaImageSets.length) return;
